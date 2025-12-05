@@ -1,5 +1,5 @@
 ### Junior Programmers Group
-# Week 1: Snik
+# Week 1: Snek
 ### Author: Gamat, Ethan Van Q. BSCS-3
 
 In this activity, you will learn the basics of <b>GAME DEVELOPMENT!</b> <br>
