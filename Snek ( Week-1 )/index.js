@@ -35,7 +35,7 @@ const start = () => {
     GLOBAL.CTX = canvas.getContext('2d'); // Javascript 2D Rendering API
     GLOBAL.CANVAS_WIDTH = canvas.clientWidth; // the width from our index.html file
     GLOBAL.CANVAS_HEIGHT = canvas.clientHeight; // the height from our index.html file
-    GLOBAL.GRID_COUNT = 50; // grid count is the count of grid per axis; it divides our world
+    GLOBAL.GRID_COUNT = 20; // grid count is the count of grid per axis; it divides our world
     GLOBAL.GRID_SIZE_X = GLOBAL.CANVAS_WIDTH / GLOBAL.GRID_COUNT; // width of a grid in pixels
     GLOBAL.GRID_SIZE_Y = GLOBAL.CANVAS_HEIGHT / GLOBAL.GRID_COUNT; // height of a grid in pixels
 
@@ -44,9 +44,7 @@ const start = () => {
     GAME_STATE.SCORE = 0;
     
 
-
-    // We need a way to draw to our canvas
-
+    // We need a way to draw to our canvas!
     // This is an example of a callback function
     // setInterval is a function that calls gameLoop() every n milliseconds
     // since we have an FPS of 15, that means our game must update 15 times every second
@@ -60,12 +58,37 @@ const start = () => {
 const gameLoop= () => {
     console.info('I am updating every 66.66 milliseconds!')
 
+    drawBackground();
+    drawGrid();
 
+    //Start here
+
+}
+
+const drawBackground = () => {
     // We fill our canvas with a black screen to remove the old drawing from the previous frame
     GLOBAL.CTX.fillStyle = '#000000';
     GLOBAL.CTX.fillRect(0, 0, GLOBAL.CANVAS_WIDTH, GLOBAL.CANVAS_HEIGHT);
+}
 
-
+const drawGrid = () => {
     // We draw our world grid!
+    GLOBAL.CTX.strokeStyle = '#555555';
 
+    //draw vertical lines
+    for(let i = 0; i < GLOBAL.GRID_COUNT; i++){
+        
+        GLOBAL.CTX.beginPath();
+        GLOBAL.CTX.moveTo(i * GLOBAL.GRID_SIZE_X, 0);
+        GLOBAL.CTX.lineTo(i * GLOBAL.GRID_SIZE_X, GLOBAL.CANVAS_HEIGHT);
+        GLOBAL.CTX.stroke();
+    }
+
+    //draw horizontal lines
+    for(let i = 0; i < GLOBAL.GRID_COUNT; i++){
+        GLOBAL.CTX.beginPath();
+        GLOBAL.CTX.moveTo(0, i * GLOBAL.GRID_SIZE_Y);
+        GLOBAL.CTX.lineTo(GLOBAL.CANVAS_WIDTH, i * GLOBAL.GRID_SIZE_Y);
+        GLOBAL.CTX.stroke();
+    }
 }

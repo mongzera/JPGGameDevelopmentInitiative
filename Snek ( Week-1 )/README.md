@@ -38,7 +38,7 @@ We can either search it on Google.com or ask Artificial Intelligence to explain,
 
 Instead of searching for the solution directly, maybe you can try solving it on your own. This is because it can teach you how to breakdown a problem into smaller problems. That is <b>KEY!</b>
 
-Now, I will let you step into the wild, and get ready for a game development experience! Goodluck!
+It is also important to keep in mind to be patient. Sometimes, we just cannot do and understand things overnight, and it is important to take your time and to not pressure yourself. You will eventually understand it and it is important to read through everything and not skip lines, you don't know, maybe the solution you are looking for is in between these lines all along. Now, I will let you step into the wild, and get ready for a game development experience! Goodluck!
 
 <b>Tasks (1 point each)</b>
 
@@ -55,8 +55,8 @@ Now, I will let you step into the wild, and get ready for a game development exp
 11) Save Highest Score (Additional Point)
 
 <b>Research about these to help you</b>
-* Javascript Keyboard Callbacks
-* 2DCanvasRenderingAPI
+* Javascript Keyboard Callbacks https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
+* CanvasRenderingContext2D https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial
 * What is a game loop?
 * What is a game logic?
 
