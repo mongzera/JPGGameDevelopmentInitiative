@@ -1,5 +1,5 @@
 /**
- *  Welcome! This is a sample code for a basic Snake game
+ *  Welcome! This is a boilerplate code for a basic Snake game
  *  Created at December 6, 2025 - 5:00 AM
  *  @author Gamat, Ethan Van Q BSCS-3
  * 
@@ -19,8 +19,8 @@ window.onload = async () => {
 
 //This datatype is called an `Object` in Javascript
 
-const GLOBAL = {}
-const GAME_STATE = {}
+const GLOBAL = {}     // Will store global variables in this object
+const GAME_STATE = {} // We will store game states in this object
 
 
 const start = () => {
@@ -46,10 +46,10 @@ const start = () => {
 
     // We need a way to draw to our canvas!
     // This is an example of a callback function
-    // setInterval is a function that calls gameLoop() every n milliseconds
+    // setInterval is a function that calls gameLoop() every `n` milliseconds
     // since we have an FPS of 15, that means our game must update 15 times every second
     // 1 second = 1000 milliseconds
-    // therefore, 1000ms / 15times = 66.66 millisecond
+    // therefore, 1000ms / 15 times = 66.66 millisecond
     // every 66.66 millisecond, our gameLoop() function is executed
 
     setInterval(()=>{gameLoop()}, 1000 / FPS);
@@ -92,3 +92,4 @@ const drawGrid = () => {
         GLOBAL.CTX.stroke();
     }
 }
+
